@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CadastroEventos.Views.CadastroEvento"
+             Title="Cadastro do Evento"
+             BackgroundColor="#F4F1FA">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+
+            <Label Text="Dados do evento" FontSize="24" FontAttributes="Bold"
+                   TextColor="#5B3FA0" HorizontalOptions="Center" />
+
+            <Label Text="Nome do evento" FontAttributes="Bold" />
+            <Entry x:Name="ent_nome" Placeholder="Ex.: Congresso de Tecnologia" />
+
+            <Label Text="Data de início" FontAttributes="Bold" />
+            <DatePicker x:Name="dtpck_inicio" Format="dd/MM/yyyy"
+                        DateSelected="dtpck_inicio_DateSelected" />
+
+            <Label Text="Data de término" FontAttributes="Bold" />
+            <DatePicker x:Name="dtpck_termino" Format="dd/MM/yyyy" />
+
+            <Label Text="Número de participantes" FontAttributes="Bold" />
+            <Entry x:Name="ent_participantes" Placeholder="Ex.: 150" Keyboard="Numeric" />
+
+            <Label Text="Local do evento" FontAttributes="Bold" />
+            <Entry x:Name="ent_local" Placeholder="Ex.: Centro de Convenções" />
+
+            <Label Text="Custo por participante (R$)" FontAttributes="Bold" />
+            <Entry x:Name="ent_custo" Placeholder="Ex.: 49,90" Keyboard="Numeric" />
+
+            <Button Text="Avançar"
+                    BackgroundColor="#5B3FA0" TextColor="White"
+                    CornerRadius="10" HeightRequest="50" Margin="0,15,0,0"
+                    Clicked="Button_Clicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
